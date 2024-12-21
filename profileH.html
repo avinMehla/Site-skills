@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Profile Interface</title>
+  <link rel="stylesheet" href="profile.css">
+</head>
+<body>
+  <div class="profile-container">
+    <!-- Sidebar -->
+    <div class="sidebar">
+      <div class="photo-section">
+        <img src="https://via.placeholder.com/120" alt="Profile Photo">
+        <h2>abc</h2>
+      </div>
+      <textarea class="bio-input" placeholder="Write your bio here..."></textarea>
+      <div class="invitations">
+        <span>Invitations:</span>
+        <span id="invitation-count" class="badge">0</span>
+      </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content">
+      <section class="skills-section">
+        <h3>Skills</h3>
+        <div id="skill-tags">
+          <!-- Skills added dynamically -->
+        </div>
+        <div class="add-skill">
+          <input type="text" id="skill-name" placeholder="Skill name">
+          <input type="range" id="skill-level" min="1" max="3" step="1">
+          <button onclick="addSkill()">Add Skill</button>
+        </div>
+      </section>
+
+      <section class="working-on-section">
+        <h3>Working On</h3>
+        <div id="current-skill" class="working-skill">
+          <p>Not set</p>
+        </div>
+        <div class="update-skill">
+          <input type="text" id="working-skill" placeholder="Enter working skill">
+          <button onclick="updateWorkingSkill()">Update</button>
+        </div>
+      </section>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

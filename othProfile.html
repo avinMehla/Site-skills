@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Profile Page</title>
+  <link rel="stylesheet" href="othProfile.css">
+</head>
+<body>
+  <!-- Go Back and Home Buttons -->
+  <div class="navigation-buttons">
+    <button class="go-back" id="go-back-btn">Go Back</button>
+    <button class="home" id="home-btn">Home</button>
+  </div>
+
+  <div class="container">
+    <div class="profile">
+      <img src="https://via.placeholder.com/150" alt="Profile Image" class="profile-image">
+      <h2 id="profile-name">jgukg</h2>
+      <p id="profile-email">Email: <span class="email">uligufytfytf</span></p>
+      <p id="profile-invites">Invitation Count: <span class="invitation-count">5</span></p>
+      
+      <!-- Skills Section -->
+      <div class="skills-section">
+        <h3>Skills</h3>
+        <div class="skill">
+          <span class="skill-name">Web Development</span>
+          <input type="range" class="skill-level" min="0" max="5" value="5" disabled>
+        </div>
+        <div class="skill">
+          <span class="skill-name">Data Analysis</span>
+          <input type="range" class="skill-level" min="0" max="5" value="4" disabled>
+        </div>
+        <div class="skill">
+          <span class="skill-name">Machine Learning</span>
+          <input type="range" class="skill-level" min="0" max="5" value="3" disabled>
+        </div>
+        <div class="skill">
+          <span class="skill-name">Graphic Design</span>
+          <input type="range" class="skill-level" min="0" max="5" value="4" disabled>
+        </div>
+      </div>
+      
+      <!-- Buttons Section -->
+      <div class="button-section">
+        <button class="send-invitation" id="send-invitation-btn">Send Invitation</button>
+        <button class="send-message" id="send-message-btn">Send Message</button>
+      </div>
+      
+      <p class="invitation-status" id="invitation-status"></p>
+    </div>
+  </div>
+
+  <script src="othProfile.js"></script>
+</body>
+</html>

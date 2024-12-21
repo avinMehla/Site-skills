@@ -1,0 +1,198 @@
+/* Reset CSS */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #1a1a2e, #16213e);
+  color: #ffffff;
+  overflow-x: hidden;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 40px;
+  background-color: rgba(0, 0, 0, 0.6);
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 10;
+  backdrop-filter: blur(10px); /* Frosted effect */
+}
+
+.navbar .logo h1 {
+  color: #ff007f;
+  font-size: 1.8em;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+}
+
+.nav-links li {
+  margin: 0 15px;
+}
+
+.nav-links a {
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.1em;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #00ff80;
+  transform: scale(1.1);
+}
+
+/* Hero Section */
+.hero {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(8px); /* Frosted effect for hero section */
+}
+
+.hero-content h2 {
+  font-size: 3em;
+  color: #ffffff;
+  margin-bottom: 20px;
+  text-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+}
+
+.hero-content p {
+  font-size: 1.2em;
+  margin-bottom: 30px;
+}
+
+.cta-buttons a {
+  background: linear-gradient(45deg, #ff007f, #007fff);
+  color: #ffffff;
+  padding: 15px 30px;
+  text-decoration: none;
+  font-size: 1.2em;
+  margin: 10px;
+  border-radius: 25px;
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.cta-buttons a:hover {
+  background: linear-gradient(45deg, #ff007f, #00ff80);
+  transform: scale(1.1);
+}
+
+/* Profile Suggestions Section */
+.profile-suggestions {
+  text-align: center;
+  padding: 50px 20px;
+}
+
+.profile-suggestions h2 {
+  font-size: 2.5em;
+  margin-bottom: 30px;
+  color: #ffffff;
+  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.5);
+}
+
+.profile-slider {
+  display: flex;
+  overflow-x: scroll;
+  padding: 20px 0;
+  scroll-snap-type: x mandatory;
+  position: relative;
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE 10+ */
+}
+
+.profile-slider::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, and Opera */
+}
+
+.profile-card {
+  background-color: rgba(42, 42, 59, 0.9); /* Slightly transparent card */
+  margin-right: 20px;
+  padding: 20px;
+  border-radius: 15px;
+  width: 300px;
+  text-align: center;
+  scroll-snap-align: start;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.profile-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4);
+}
+
+.profile-card img {
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  margin-bottom: 15px;
+}
+
+.profile-info h3 {
+  font-size: 1.5em;
+  margin-bottom: 10px;
+}
+
+.profile-info p {
+  font-size: 1.1em;
+  margin-bottom: 10px;
+}
+
+.view-profile {
+  color: #ff007f;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.1em;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.view-profile:hover {
+  color: #00ff80;
+  transform: scale(1.1);
+}
+
+/* Fun Fact Section */
+.fun-facts {
+  background: rgba(42, 42, 59, 0.9);
+  padding: 30px 20px;
+  text-align: center;
+  margin-top: 50px;
+  border-radius: 15px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+.fun-facts h2 {
+  font-size: 2em;
+  margin-bottom: 10px;
+}
+
+.fun-facts p {
+  font-size: 1.2em;
+  color: #ff007f;
+  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.5);
+}
+
+/* Footer */
+footer {
+  background: #1a1a2e;
+  text-align: center;
+  padding: 20px 0;
+  color: #ffffff;
+  box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.2);
+}

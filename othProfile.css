@@ -1,0 +1,176 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #1a1a2e, #16213e);
+  color: #ffffff;
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+/* Navigation Buttons */
+.navigation-buttons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+  background: rgba(0, 0, 0, 0.7);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.navigation-buttons button {
+  background: linear-gradient(45deg, #ff007f, #007fff);
+  color: #ffffff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 25px;
+  font-size: 1em;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.navigation-buttons button:hover {
+  background: linear-gradient(45deg, #ff007f, #00ff80);
+}
+
+/* Profile Layout */
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 50px 20px;
+}
+
+.profile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 30px;
+  background: rgba(0, 0, 0, 0.6);
+  border-radius: 15px;
+  backdrop-filter: blur(10px);
+  max-width: 600px;
+  width: 90%;
+  margin-bottom: 30px;
+}
+
+.profile-image {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 5px solid #ff007f;
+  margin-bottom: 20px;
+}
+
+.profile h2 {
+  font-size: 2.5em;
+  color: #ffffff;
+  margin-bottom: 15px;
+}
+
+.profile p {
+  font-size: 1.2em;
+  margin-bottom: 10px;
+}
+
+.profile span {
+  color: #00ff80;
+}
+
+/* Skills Section */
+.skills-section {
+  margin-top: 30px;
+  width: 100%;
+  text-align: center;
+}
+
+.skills-section h3 {
+  font-size: 2em;
+  color: #ff007f;
+  margin-bottom: 20px;
+}
+
+.skill {
+  margin: 20px 0;
+}
+
+.skill-name {
+  font-size: 1.5em;
+  color: #ffffff;
+  display: block;
+}
+
+.skill-level {
+  width: 100%;
+  margin-top: 10px;
+  -webkit-appearance: none;
+  appearance: none;
+  height: 5px;
+  background: #00ff80;
+  border-radius: 5px;
+  outline: none;
+  transition: background 0.3s ease;
+}
+
+.skill-level::-webkit-slider-runnable-track {
+  height: 5px;
+  background: #2a2a3b;
+}
+
+.skill-level::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  background: #ff007f;
+  border-radius: 50%;
+}
+
+.skill-level::-moz-range-track {
+  height: 5px;
+  background: #2a2a3b;
+}
+
+.skill-level::-moz-range-thumb {
+  width: 20px;
+  height: 20px;
+  background: #ff007f;
+  border-radius: 50%;
+}
+
+/* Buttons Section */
+.button-section {
+  margin-top: 20px;
+  display: flex;
+  gap: 20px;
+}
+
+.button-section button {
+  background: linear-gradient(45deg, #ff007f, #007fff);
+  color: #ffffff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 25px;
+  font-size: 1em;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.button-section button:hover {
+  background: linear-gradient(45deg, #ff007f, #00ff80);
+}
+
+/* Invitation Status */
+.invitation-status {
+  margin-top: 20px;
+  font-size: 1.2em;
+  color: #ffffff;
+}

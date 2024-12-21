@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Search Page</title>
+  <link rel="stylesheet" href="search.css">
+</head>
+<body>
+  <div class="container">
+    <h2>Search Peers and Teams</h2>
+
+    <!-- Search Bar -->
+    <div class="search-bar">
+      <input type="text" id="search" placeholder="Search for skills, teams, or profiles..." oninput="searchProfiles()">
+      <button class="search-btn" onclick="searchProfiles()">Search</button>
+    </div>
+
+    <!-- Results Section -->
+    <div id="results-section" class="results-section">
+      <h3>Search Results</h3>
+      <div class="profile-slider" id="profile-suggestions">
+        <!-- Profiles will be dynamically added here -->
+      </div>
+    </div>
+  </div>
+
+  <script src="search.js"></script>
+</body>
+</html>

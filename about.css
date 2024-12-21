@@ -1,0 +1,189 @@
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #2b2b47, #1e2348); /* Softer background gradient */
+    color: #ffffff;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+  }
+  
+  /* Container */
+  .container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px;
+    background: rgba(30, 30, 50, 0.8); /* Slightly softer background */
+    border-radius: 20px;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+  }
+  
+  /* Heading */
+  h2 {
+    text-align: center;
+    font-size: 2.5em;
+    font-weight: 600;
+    margin-bottom: 20px;
+    background: linear-gradient(45deg, #ff7f7f, #7fa1ff);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  
+  /* About Section */
+  .about-text {
+    font-size: 1.1em;
+    color: #b0b0b0;
+    text-align: center;
+    margin-bottom: 40px;
+    line-height: 1.8;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  /* Mission Section */
+  .mission {
+    text-align: center;
+    margin-top: 50px;
+  }
+  
+  .mission h3 {
+    font-size: 2em;
+    color: #ffffff;
+    margin-bottom: 20px;
+  }
+  
+  .mission p {
+    font-size: 1.1em;
+    color: #b0b0b0;
+    line-height: 1.6;
+    max-width: 900px;
+    margin: 0 auto;
+  }
+  
+  /* Team Section */
+  .team {
+    margin-top: 50px;
+  }
+  
+  .team h3 {
+    text-align: center;
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: #ffffff;
+  }
+  
+  .team-members {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 30px;
+    padding: 20px;
+  }
+  
+  .team-member {
+    background: #2a2a4d;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .team-member:hover {
+    transform: translateY(-5px);
+  }
+  
+  .team-member img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    margin-bottom: 15px;
+  }
+  
+  .team-member h4 {
+    font-size: 1.2em;
+    margin-bottom: 5px;
+    color: #ffffff;
+  }
+  
+  .team-member p {
+    font-size: 1em;
+    color: #b0b0b0;
+  }
+  
+  /* Contact Section */
+  .contact {
+    margin-top: 60px;
+    text-align: center;
+  }
+  
+  .contact h3 {
+    font-size: 2em;
+    margin-bottom: 15px;
+    color: #ffffff;
+  }
+  
+  .contact p {
+    font-size: 1.1em;
+    color: #b0b0b0;
+    margin-bottom: 15px;
+  }
+  
+  .contact ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .contact ul li {
+    font-size: 1.1em;
+    color: #b0b0b0;
+    margin: 10px 0;
+  }
+  
+  .contact ul li a {
+    color: #7fa1ff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  
+  .contact ul li a:hover {
+    color: #ff7f7f;
+  }
+  
+  /* Decorative Elements */
+  .container::after {
+    content: '';
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    top: -20px;
+    right: -20px;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.2) 20%, transparent 70%);
+    border-radius: 50%;
+    z-index: 1;
+  }
+  
+  .container::before,
+  .container::after {
+    animation: glow 5s linear infinite;
+  }
+  
+  @keyframes glow {
+    0%, 100% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.2);
+    }
+  }
+  
