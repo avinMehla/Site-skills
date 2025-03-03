@@ -1,73 +1,82 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>SiteSkill Landing Page</title>
-  <link rel="stylesheet" href="landing.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SiteSkill Landing Page</title>
+    <link rel="stylesheet" href="landing.css">
 </head>
 <body>
-  <!-- Navbar -->
-  <nav class="navbar">
-    <div class="logo">
-      <h1>SiteSkill</h1>
-    </div>
-    <ul class="nav-links">
-      <li><a href="#about">About</a></li>
-      <li><a href="#features">Features</a></li>
-      <li><a href="#contact">Contact Us</a></li>
-    </ul>
-    <button class="auth-button" onclick="goToSignUp()"> Sign Up / Sign In </button>
-  </nav>
 
-  <!-- Hero Section -->
-  <header class="hero">
-    <div class="hero-content">
-      <h2>Connect, Collaborate, Create</h2>
-      <p>Empowering skilled individuals to build great teams and achieve together.</p>
-      <blockquote>"Great teamwork makes the dream work!"</blockquote>
-      <div class="cta-buttons">
-        <a href="#features" class="cta-button">Learn More</a>
-        <a href="#contact" class="cta-button">Get in Touch</a>
-      </div>
-    </div>
-  </header>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="logo">
+            <h1>SiteSkill</h1>
+        </div>
+        <ul class="nav-links">
+            <li><a href="#about">About</a></li>
+            <li><a href="#features">Features</a></li>
+            <li><a href="#contact">Contact Us</a></li>
+        </ul>
+        <button class="auth-button" onclick="goToSignUp()">Sign Up / Sign In</button>
+        <button id="toggle-theme" class="theme-toggle">🌙</button>
+    </nav>
 
-  <!-- Features Section -->
-  <section id="features" class="features">
-    <h2>Why Choose SiteSkill?</h2>
-    <div class="feature-cards">
+    <!-- Hero Section -->
+    <header class="hero">
+        <div class="hero-content">
+            <h2>Connect, Collaborate, Create</h2>
+            <p>Empowering skilled individuals to build great teams and achieve together.</p>
+            <blockquote>"Teamwork makes the dream work!"</blockquote>
+            <div class="cta-buttons">
+                <a href="#features" class="cta-button">Learn More</a>
+                <a href="#contact" class="cta-button">Get in Touch</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Features Section -->
+    <!-- Features Section -->
+<section id="features" class="features">
+  <h2>Why Choose SiteSkill?</h2>
+  <p class="features-subtext">Empowering skilled individuals to collaborate and grow together.</p>
+  <div class="feature-cards">
       <div class="feature-card">
-        <h3>Discover Skills</h3>
-        <p>Find peers with the skills you need to complete your projects.</p>
+          <div class="icon">🛠️</div>
+          <h3>Discover Skills</h3>
+          <p>Find peers with the skills you need to complete your projects.</p>
       </div>
       <div class="feature-card">
-        <h3>Collaborate Effortlessly</h3>
-        <p>Build and manage teams to achieve common goals.</p>
+          <div class="icon">🤝</div>
+          <h3>Collaborate Effortlessly</h3>
+          <p>Build and manage teams to achieve common goals.</p>
       </div>
       <div class="feature-card">
-        <h3>Grow Together</h3>
-        <p>Learn, share, and succeed with a supportive community.</p>
+          <div class="icon">🚀</div>
+          <h3>Grow Together</h3>
+          <p>Learn, share, and succeed with a supportive community.</p>
       </div>
-    </div>
-  </section>
+  </div>
+</section>
 
-  <!-- Contact Us Section -->
-  <section id="contact" class="contact">
-    <h2>Contact Us</h2>
-    <p>Have any questions? We’re here to help!</p>
-    <ul>
-      <li>Email: <a href="project k liye email">support@siteskill.com</a></li>
-      <li>Phone: 376437628362</li>
-      <li>Address: jiwgdhfikhebifgeri;fhr;</li>
-    </ul>
-  </section>
 
-  <!-- Footer -->
-  <footer>
-    <p>&copy; 2024 SiteSkill. All Rights Reserved.</p>
-  </footer>
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <h2>Contact Us</h2>
+        <p>Have any questions? We’re here to help!</p>
+        <ul>
+            <li>Email: <a href="mailto:support@siteskill.com">support@siteskill.com</a></li>
+            <li>Phone: +123 456 7890</li>
+            <li>Address: 1234 Skill Street, Tech City</li>
+        </ul>
+    </section>
 
-  <script src="landing.js"></script>
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 SiteSkill. All Rights Reserved.</p>
+        <p>Join our community and build your dream team today!</p>
+    </footer>
+
+    <script src="landing.js"></script>
 </body>
 </html>
