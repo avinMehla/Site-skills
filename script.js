@@ -1,23 +1,19 @@
-
-
-JavaScript (script.js)
-
-// Attach an event listener to the form submission
-document.getElementById('signupForm').addEventListener('submit', function (event) {
-  // Prevent the default form submission behavior
-  event.preventDefault();
-
-  // Get the values of the password and confirm password fields
-  const password = document.getElementById('password').value;
-
-    // Display a success message if the passwords match
-    alert('Sign-up successful!');
+document.getElementById("signin-form").addEventListener("submit", function(event) {
+    event.preventDefault(); // Prevent form submission
     
-    // Additional logic can be added here, e.g., sending data to a server via AJAX
-    console.log('Form submitted successfully');
-  }
-);
-function goToHome(){
+    // Dummy email and password
+    const dummyEmail = "test@example.com";
+    const dummyPassword = "password123";
 
-   window.location.href = "home.html"; 
-}
+    // Get user input values
+    const email = document.querySelector("input[type='email']").value;
+    const password = document.querySelector("input[type='password']").value;
+
+    // Validate user input
+    if (email === dummyEmail && password === dummyPassword) {
+        alert("Login successful! Redirecting...");
+        window.location.href = "home.html"; // Redirect to the home page
+    } else {
+        alert("Invalid email or password. Please try again.");
+    }
+});
