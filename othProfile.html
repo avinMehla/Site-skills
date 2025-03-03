@@ -1,56 +1,155 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Profile Page</title>
-  <link rel="stylesheet" href="othProfile.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Profile - SiteSkill</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="profile.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-  <!-- Go Back and Home Buttons -->
-  <div class="navigation-buttons">
-    <button class="go-back" id="go-back-btn">Go Back</button>
-    <button class="home" id="home-btn">Home</button>
-  </div>
+    <div class="site-container">
+        <header class="header">
+            <div class="container">
+                <div class="header-content">
+                    <div class="header-left">
+                        <button class="back-button" onclick="history.back()">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="m12 19-7-7 7-7"></path>
+                                <path d="M19 12H5"></path>
+                            </svg>
+                        </button>
+                        <a href="index.html" class="logo">SiteSkill</a>
+                    </div>
+                    <a href="index.html" class="home-button">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+                            <polyline points="9 22 9 12 15 12 15 22"></polyline>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </header>
 
-  <div class="container">
-    <div class="profile">
-      <img src="https://via.placeholder.com/150" alt="Profile Image" class="profile-image">
-      <h2 id="profile-name">jgukg</h2>
-      <p id="profile-email">Email: <span class="email">uligufytfytf</span></p>
-      <p id="profile-invites">Invitation Count: <span class="invitation-count">5</span></p>
-      
-      <!-- Skills Section -->
-      <div class="skills-section">
-        <h3>Skills</h3>
-        <div class="skill">
-          <span class="skill-name">Web Development</span>
-          <input type="range" class="skill-level" min="0" max="5" value="5" disabled>
-        </div>
-        <div class="skill">
-          <span class="skill-name">Data Analysis</span>
-          <input type="range" class="skill-level" min="0" max="5" value="4" disabled>
-        </div>
-        <div class="skill">
-          <span class="skill-name">Machine Learning</span>
-          <input type="range" class="skill-level" min="0" max="5" value="3" disabled>
-        </div>
-        <div class="skill">
-          <span class="skill-name">Graphic Design</span>
-          <input type="range" class="skill-level" min="0" max="5" value="4" disabled>
-        </div>
-      </div>
-      
-      <!-- Buttons Section -->
-      <div class="button-section">
-        <button class="send-invitation" id="send-invitation-btn">Send Invitation</button>
-        <button class="send-message" id="send-message-btn">Send Message</button>
-      </div>
-      
-      <p class="invitation-status" id="invitation-status"></p>
+        <main>
+            <div class="container">
+                <div class="profile-container">
+                    <div class="profile-header">
+                        <div class="profile-avatar">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                                <circle cx="12" cy="7" r="4"></circle>
+                            </svg>
+                        </div>
+                        <h2 class="profile-name">Alex Johnson</h2>
+                        <p class="profile-email">Email: <span class="email">alex@example.com</span></p>
+                        <div class="request-count">
+                            <span>Request Count:</span>
+                            <span class="badge" id="request-count">5</span>
+                        </div>
+                    </div>
+
+                    <div class="profile-section">
+                        <h3 class="section-title">Skills</h3>
+                        <div class="skills-list">
+                            <div class="skill-item">
+                                <div class="skill-header">
+                                    <span class="skill-name">Web Development</span>
+                                    <span class="skill-level">Expert</span>
+                                </div>
+                                <div class="skill-progress">
+                                    <div class="skill-progress-bar" style="width: 100%"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-header">
+                                    <span class="skill-name">Data Analysis</span>
+                                    <span class="skill-level">Good</span>
+                                </div>
+                                <div class="skill-progress">
+                                    <div class="skill-progress-bar" style="width: 80%"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-header">
+                                    <span class="skill-name">Machine Learning</span>
+                                    <span class="skill-level">Well Versed</span>
+                                </div>
+                                <div class="skill-progress">
+                                    <div class="skill-progress-bar" style="width: 60%"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-header">
+                                    <span class="skill-name">Graphic Design</span>
+                                    <span class="skill-level">Good</span>
+                                </div>
+                                <div class="skill-progress">
+                                    <div class="skill-progress-bar" style="width: 80%"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-header">
+                                    <span class="skill-name">Mobile Development</span>
+                                    <span class="skill-level">Beginner</span>
+                                </div>
+                                <div class="skill-progress">
+                                    <div class="skill-progress-bar" style="width: 40%"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="profile-section">
+                        <div class="tabs">
+                            <div class="tab-buttons">
+                                <button class="tab-button active" data-tab="pending">Pending Requests</button>
+                                <button class="tab-button" data-tab="previous">Previous Works</button>
+                            </div>
+                            <div class="tab-content active" id="pending-tab">
+                                <div id="request-status">
+                                    <p class="empty-message">No pending requests</p>
+                                </div>
+                            </div>
+                            <div class="tab-content" id="previous-tab">
+                                <div class="previous-works">
+                                    <div class="work-item">
+                                        <span class="work-name">Web Portfolio Project</span>
+                                        <span class="work-date">Completed 2 months ago</span>
+                                    </div>
+                                    <div class="work-item">
+                                        <span class="work-name">Data Visualization App</span>
+                                        <span class="work-date">Completed 5 months ago</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="profile-actions">
+                        <button id="send-request" class="button button-primary">Send Request</button>
+                        <button id="send-message" class="button button-outline">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                                <polyline points="22,6 12,13 2,6"></polyline>
+                            </svg>
+                            Send Message
+                        </button>
+                    </div>
+
+                    <div id="no-requests-message" class="error-message" style="display: none;">
+                        No requests remaining. Please wait for the next opportunity.
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <footer class="footer">
+            <p>&copy; <span id="current-year"></span> SiteSkill. All Rights Reserved.</p>
+        </footer>
     </div>
-  </div>
 
-  <script src="othProfile.js"></script>
+    <script src="profile-other.js"></script>
 </body>
 </html>
