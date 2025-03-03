@@ -1,42 +1,80 @@
-// Variables
-const sendInvitationBtn = document.getElementById('send-invitation-btn');
-const goBackBtn = document.getElementById('go-back-btn');
-const homeBtn = document.getElementById('home-btn');
-const sendMessageBtn = document.getElementById('send-message-btn');
-const invitationStatus = document.getElementById('invitation-status');
-const invitationCountElem = document.getElementById('profile-invites').querySelector('.invitation-count');
-let invitationCount = parseInt(invitationCountElem.innerText);
+// DOM elements
+const sendRequestButton = document.getElementById('send-request');
+const sendMessageButton = document.getElementById('send-message');
+const requestStatusContainer = document.getElementById('request-status');
+const noRequestsMessage = document.getElementById('no-requests-message');
+const requestCountElement = document.getElementById('request-count');
+const tabButtons = document.querySelectorAll('.tab-button');
+const tabContents = document.querySelectorAll('.tab-content');
 
-// Send Invitation Function
-sendInvitationBtn.addEventListener('click', function () {
-  if (invitationCount > 0) {
-    invitationCount--;
-    invitationCountElem.innerText = invitationCount;
-    invitationStatus.innerText = 'Invitation Sent! Awaiting Acceptance...';
-    invitationStatus.style.color = '#7fa1ff';
+// Initial state
+let requestCount = 5;
+let requestStatus = '';
 
-    // Simulate email acceptance after 3 seconds
-    setTimeout(() => {
-      invitationStatus.innerText = 'Invitation Accepted! Email: johndoe@example.com';
-      invitationStatus.style.color = '#7fff7f';
-    }, 3000);
-  } else {
-    invitationStatus.innerText = 'No invitations remaining. Please wait for the next opportunity.';
-    invitationStatus.style.color = '#ff7f7f';
-  }
+// Set current year in footer
+document.addEventListener('DOMContentLoaded', function() {
+    const yearElement = document.getElementById('current-year');
+    if (yearElement) {
+        yearElement.textContent = new Date().getFullYear();
+    }
 });
 
-// Go Back Function
-goBackBtn.addEventListener('click', function () {
-  window.history.back();  // Navigate to the previous page
+// Tab switching
+tabButtons.forEach(button => {
+    button.addEventListener('click', function() {
+        // Remove active class from all buttons and contents
+        tabButtons.forEach(btn => btn.classList.remove('active'));
+        tabContents.forEach(content => content.classList.remove('active'));
+        
+        // Add active class to clicked button and corresponding content
+        this.classList.add('active');
+        const tabId = this.getAttribute('data-tab');
+        document.getElementById(`${tabId}-tab`).classList.add('active');
+    });
 });
 
-// Home Button Function
-homeBtn.addEventListener('click', function () {
-  window.location.href = 'index.html';  // Navigate to the home page
+// Send request functionality
+sendRequestButton.addEventListener('click', function() {
+    if (requestCount > 0) {
+        requestCount--;
+        requestCountElement.textContent = requestCount;
+        requestStatus = 'pending';
+        
+        // Update UI
+        updateRequestStatusUI();
+        
+        // Simulate request acceptance after 3 seconds
+        setTimeout(function() {
+            requestStatus = 'accepted';
+            updateRequestStatusUI();
+        }, 3000);
+    } else {
+        noRequestsMessage.style.display = 'block';
+    }
 });
 
-// Send Message Button Function
-sendMessageBtn.addEventListener('click', function () {
-  alert('Message Sent!');  // Simulate sending a message
+// Send message functionality
+sendMessageButton.addEventListener('click', function() {
+    alert('Message Sent!');
 });
+
+// Update request status UI
+function updateRequestStatusUI() {
+    if (requestStatus === 'pending') {
+        requestStatusContainer.innerHTML = `
+            <div class="pending-message">
+                <p>Request Sent! Awaiting Acceptance...</p>
+            </div>
+        `;
+    } else if (requestStatus === 'accepted') {
+        requestStatusContainer.innerHTML = `
+            <div class="success-message">
+                <p>Request Accepted! Email: alex@example.com</p>
+            </div>
+        `;
+    } else {
+        requestStatusContainer.innerHTML = `
+            <p class="empty-message">No pending requests</p>
+        `;
+    }
+}
