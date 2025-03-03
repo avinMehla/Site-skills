@@ -2,8 +2,8 @@ document.getElementById("signin-form").addEventListener("submit", function(event
     event.preventDefault(); // Prevent form submission
     
     // Dummy email and password
-    const dummyEmail = "test@example.com";
-    const dummyPassword = "password123";
+    const dummyEmail = "teamElite.com";
+    const dummyPassword = "teamElite007";
 
     // Get user input values
     const email = document.querySelector("input[type='email']").value;
