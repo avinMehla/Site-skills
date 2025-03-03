@@ -1,4 +1,4 @@
-    /* Reset */
+/* Reset */
 * {
     margin: 0;
     padding: 0;
@@ -9,6 +9,7 @@ body {
     font-family: 'Poppins', sans-serif;
     background: linear-gradient(135deg, #1a1a2e, #16213e);
     color: #ffffff;
+    transition: background 0.5s, color 0.5s;
 }
 
 /* Navbar */
@@ -63,15 +64,15 @@ body {
     background: linear-gradient(45deg, #ff007f, #00ff80);
 }
 
-/* Hero Section */
+/* Hero Section with Parallax */
 .hero {
     height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
-    padding: 0 20px;
-    background: rgba(0, 0, 0, 0.6);
+    background: url('your-background-image.jpg') no-repeat center center/cover;
+    background-attachment: fixed;
     backdrop-filter: blur(8px);
 }
 
@@ -106,38 +107,34 @@ blockquote {
     background: linear-gradient(45deg, #ff007f, #00ff80);
 }
 
-/* Features Section */
-.features {
-    padding: 50px 20px;
-    text-align: center;
+/* Light Mode */
+body.light-mode {
+    background: white;
+    color: black;
 }
 
-.features h2 {
-    font-size: 2.5em;
-    margin-bottom: 30px;
+body.light-mode .navbar {
+    background: rgba(255, 255, 255, 0.8);
 }
 
-.feature-cards {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
+body.light-mode .feature-card {
+    background: rgba(255, 255, 255, 0.9);
+    color: black;
 }
 
-.feature-card {
-    background: rgba(42, 42, 59, 0.9);
-    padding: 20px;
-    border-radius: 15px;
-    width: 300px;
-    text-align: center;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-    transition: transform 0.3s ease;
+/* Dark/Light Mode Toggle Button */
+.theme-toggle {
+    background: none;
+    border: none;
+    font-size: 1.5em;
+    cursor: pointer;
+    color: white;
 }
 
-.feature-card:hover {
-    transform: scale(1.05);
+body.light-mode .theme-toggle {
+    color: black;
 }
-
-/* Contact Section */
+/* Contact Section - Original Layout Restore */
 .contact {
     padding: 50px 20px;
     text-align: center;
@@ -166,10 +163,88 @@ blockquote {
     text-decoration: underline;
 }
 
-/* Footer */
+/* Footer - Original Style Restore */
 footer {
     background: #1a1a2e;
     text-align: center;
     padding: 20px;
     color: #ffffff;
+    font-size: 1.1em;
 }
+
+footer p:last-child {
+    font-style: italic;
+    color: #00ff80;
+}
+/* Features Section - Enhanced */
+.features {
+    padding: 60px 20px;
+    text-align: center;
+    background: linear-gradient(135deg, #1a1a2e, #16213e);
+    color: #ffffff;
+}
+
+.features h2 {
+    font-size: 2.8em;
+    margin-bottom: 10px;
+    color: #ff007f;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.features-subtext {
+    font-size: 1.2em;
+    color: #cccccc;
+    margin-bottom: 30px;
+}
+
+/* Feature Cards */
+.feature-cards {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.feature-card {
+    background: rgba(42, 42, 59, 0.9);
+    padding: 25px;
+    border-radius: 15px;
+    width: 320px;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.feature-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(255, 0, 127, 0.5);
+}
+
+/* Feature Icons */
+.feature-card .icon {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+    display: block;
+    color: #00ff80;
+}
+.auth-button {
+    background: linear-gradient(45deg, #ff007f, #007fff);
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    position: absolute;
+    right: 20px; /* Button ko right side move karne ke liye */
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.auth-button:hover {
+    background: linear-gradient(45deg, #ff007f, #00ff80);
+}
+
