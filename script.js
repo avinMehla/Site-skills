@@ -2,7 +2,7 @@ document.getElementById("signin-form").addEventListener("submit", function(event
     event.preventDefault(); // Prevent form submission
     
     // Dummy email and password
-    const dummyEmail = "teamElite.com";
+    const dummyEmail = "teamElite@gmail.com";
     const dummyPassword = "teamElite007";
 
     // Get user input values
