@@ -41,26 +41,25 @@ Responsive UI: Built with HTML, CSS, and JavaScript.
 
 Interactive Design: Includes animations and a dynamic theme.
 📂 Project Structure
-php
-/ (Root Directory)
-│── index.html          # Landing Page
-│── about.html          # About the Project
-│── signin.html         # Sign-in Page
-│── signup.html         # Sign-up Page
-│── profile.html        # User Profile Page
-│── profile-other.html  # View Other Users' Profiles
-│── profileH.html       # Another Profile Variant
-│── search.html         # Search Feature
-│── assets/
-│   ├── css/
-│   │   ├── styles.css  # Main Stylesheet
-│   │   ├── about.css
-│   │   ├── profile.css
-│   ├── js/
-│   │   ├── script.js   # General Interactivity
-│   │   ├── auth.js     # Authentication Logic
-│   │   ├── profile.js  # Profile Interactivity
-│── README.md           # Project Documentation
+🔹 Main Files
+index.html →  Landing Page (Home)
+about.html → About the Project
+signin.html → Sign-in Page
+signup.html → Sign-up Page
+profile.html → User Profile Page
+profile-other.html → View Other Users' Profiles
+profileH.html → Another Profile Variant
+search.html → Search Functionality Page
+🔹 CSS Files (Styling)
+styles.css → Main Styling File
+about.css → Styling for the About Page
+profile.css → Styling for User Profiles
+🔹 JavaScript Files (Functionality)
+script.js → Authentication Logic (Sign In & Sign Up)
+profile.js → Profile Management & Updates
+🔹 Other Files
+README.md → Project Documentation
+
 🛠️ Setup Instructions
 Clone or Download the project repository.
 Open index.html in a browser.
