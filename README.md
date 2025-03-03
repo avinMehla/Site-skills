@@ -2,11 +2,16 @@
 README
 📝 Message for the Evaluating Team
 (Valid until March 6, 2025)
-This repository contains both the frontend and backend of our project. However, due to time constraints, we couldn't fully complete the integration.
+This repository contains both the frontend and backend of our project.
+However, due to time constraints, we couldn't fully complete the integration.
 
-To ensure functionality, we have added dummy data, allowing the system to work with pre-fed inputs. We appreciate your understanding that the project is still under development, but despite this, it remains functional and demonstrates our intended features.
+To ensure functionality, we have added dummy data, allowing the system to work with pre-fed inputs.
+We appreciate your understanding that the project is still under development, 
+but despite this, it remains functional and demonstrates our intended features.
 
 🚀 Getting Started
+
+
 🔹 Steps to Explore the Project
 Open the landing page.
 Click on Sign In.
@@ -17,21 +22,26 @@ After logging in, you’ll be redirected to the home page, where you can:
 Navigate through different sections.
 Update your dummy profile.
 Search for other users.
-Since this is a dummy account, the experience might not be as engaging as intended, but it showcases the core functionality.
+Since this is a dummy account, the experience might not be as engaging as intended, 
+but it showcases the core functionality.
 
 📌 Project Overview
-This is a web-based platform designed to help users build and manage teams for competitions. It serves as a space where individuals can find like-minded peers and collaborate effectively.
+This is a web-based platform designed to help users build and manage teams for competitions. 
+It serves as a space where individuals can find like-minded peers and collaborate effectively.
 
 🔹 Key Features
+
 User Authentication: Sign in and sign up functionality.
+
 Profile Management: Users can update their profiles.
+
 Search Functionality: Find relevant users and teams.
+
 Responsive UI: Built with HTML, CSS, and JavaScript.
+
 Interactive Design: Includes animations and a dynamic theme.
 📂 Project Structure
 php
-Copy
-Edit
 / (Root Directory)
 │── index.html          # Landing Page
 │── about.html          # About the Project
