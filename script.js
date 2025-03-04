@@ -11,7 +11,6 @@ document.getElementById("signin-form").addEventListener("submit", function(event
 
     // Validate user input
     if (email === dummyEmail && password === dummyPassword) {
-        alert("Login successful! Redirecting...");
         window.location.href = "home.html"; // Redirect to the home page
     } else {
         alert("Invalid email or password. Please try again.");
