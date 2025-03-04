@@ -12,7 +12,7 @@ app.use(bodyParser.json());
 
 // Connect to MongoDB
 mongoose
-  .connect('mongodb+srv://sehrawat_miki:o0UZ0IcjFBeUNkdE@sehrawat1miki.y0j9wfl.mongodb.net/coll_connect')
+  .connect('mongodb address')
   .then(() => console.log('MongoDB connected'))
   .catch((err) => console.error('MongoDB connection error:', err));
 
