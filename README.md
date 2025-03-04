@@ -3,7 +3,7 @@
 
 ## 📝 Message for the Evaluating Team  
 - This project includes both **frontend and backend** development.  
-- Due to **time constraints**, we could not complete the **integration**.  
+- Due to **time constraints**, we could not perform the complete **integration**.  
 - To demonstrate functionality, we have added **dummy data**, so the system works with pre-fed inputs.  
 - We hope the **evaluating team understands** that the project is still in development, but it remains fully operational in its current state.  
 
@@ -11,7 +11,7 @@
 
 ## 🚀 How to Use the Project  
 ### 🔹 Steps to Explore  
-1. **Open the Landing Page**.  
+1. **Open the Landing Page**, by going through the link https://avinmehla.github.io/Site-skills/  
 2. **Sign In** using these **dummy credentials**:  
    - **Email:** `teamElite@gmail.com`  
    - **Password:** `teamElite007`  
